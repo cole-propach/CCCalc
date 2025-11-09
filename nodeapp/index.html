@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="back.js"></script>
+    <style>
+      .popup {
+        font-weight: bold;
+        font-size: 30px;
+        margin-top: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Counting Chickens Calculator</h1>
+    <h2>Import:</h2>
+    <form action="/action_page.php">
+      <label for="img">Select image:</label>
+      <input type="file" id="img" name="img" accept="image/*" />
+      <br />
+      <input type="submit" />
+    </form>
+    <br />
+    <label for="numRows">Number of Rows:</label><br />
+    <input type="text" id="numRows" /><br />
+    <label for="numCols">Number of Columns:</label><br />
+    <input type="text" id="numCols" /><br />
+    <br />
+    <button onclick="importClick()">Click to Import Board</button>
+    <div id="importConfirmation" class="popup"></div>
+    <div hidden id="importContainer"></div>
+    <br />
+    <h2>Calculate:</h2>
+    <label for="colors" class="choose">Choose the color:</label>
+    <select name="colors" id="colors">
+      <option value="0">Blue</option>
+      <option value="1">Red</option>
+      <option value="2">Yellow</option>
+      <option value="3">Wild</option>
+    </select>
+    <br />
+    <br />
+    <label for="animals" class="choose">Choose the animal:</label>
+    <select name="animals" id="animals">
+      <option value="0">Chickens</option>
+      <option value="1">Cows</option>
+      <option value="2">Pigs</option>
+      <option value="3">Sheep</option>
+    </select>
+    <br />
+    <br />
+    <button onclick="calcClick()">Click to Calculate</button>
+    <div id="calcContainer" class="popup"></div>
+  </body>
+</html>
